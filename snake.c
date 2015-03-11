@@ -223,4 +223,10 @@ int game_over()
     endwin();
     free_snake();
     exit(0);
+C//end
+
+D
+D
+D
+C
 }
