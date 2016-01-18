@@ -1,0 +1,40 @@
+1、  git clone ssh://git@192.168.0.119/home/git/xxxx
+2、  git checkout origin/xxxx -b xxxx 
+
+
+3、   git add dir
+4、   git commit -m "[Camera]:合入ov5648光阵模组摄像头效果"
+5、  git push origin xxxx:xxxx 
+
+
+git merge       //合并分支
+
+git rebase      //重新定义分支的版本库状态
+
+git cherry-pick //用于把另一个本地分支的commit修改应用到当前分支
+
+git log         //查看历史记录
+
+git whatchanged //查看某个分支的发展过程
+
+git revert      // 是撤销某次操作，此次操作之前的commit都会被保留
+
+git branch      // 列出分支
+
+git status      //查看你的文件在工作目录与缓存的状态
+
+git diff        //显示已写入缓存与已修改但尚未写入缓存的改动的区别
+
+git reset       //是撤销某次提交，但是此次之后的修改都会被退回到暂存区
+
+git tag         //给历史记录中的某个重要的一点打上标签
+
+git push        //推送你的新分支与数据到某个远端仓库 
+
+git pull        //从远端仓库提取数据并尝试合并到当前分支
+
+git rm          //将文件从缓存区移除 
+
+ http://blog.chinaunix.net/uid-20770070-id-203993.html
+
+

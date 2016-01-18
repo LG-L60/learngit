@@ -1,0 +1,27 @@
+王工，
+请使用如下服务器：
+192.168.0.11   192.168.0.229  0.167
+builder2
+12345678
+ 
+samba:\\192.168.0.229\builder2     lanhai.192.168.0.164
+builder2    12345678
+ 
+工作中请主动沟通。
+
+--------------------------------------------------------------------------------
+
+赢在执行 
+深圳市东方拓宇科技有限公司
+
+软件部 赵少鹏
+
+18665959824 | 0755-86360693-8064
+
+git clone ssh://git@192.168.0.119/home/git/ALPS.KK1.MP6.V1_ZTENJ72_WE_72_M536_KK -b Driver_Base
+        
+git clone ssh://git@192.168.0.242/github/ALPS.L0.P45.2_K35V1_64_OP01_PRE_INHOUSE -b Driver_Base_E520
+
+
+
+alps\out\target\product\aeon6582_wt_l\obj\CGEN

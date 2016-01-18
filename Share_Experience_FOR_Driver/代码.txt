@@ -1,0 +1,105 @@
+【查看工程】
+ 1  ./mk listp  可以看到工程名
+ 2  电脑进入alps/mediatek/custom  也可以
+
+【进行编译】
+./mk -t 目录名 n 
+
+【切换分支】
+checkout 分支名
+
+【查看历史】
+git log →按Q可以退出
+git diff→文件修改情况
+
+【同步】  如服务器为01，本地10
+  1：git fetch→ 本地变成11  抓取服务器内容添加进本地
+  2：git merge→ 本地变成01  将本地同步为服务器内容
+
+【如何下载分支进自己服务器】
+打开网页若是http://192.168.0.119/gitweb/?p=ALPS.KK1.MP6.V1_ZTENJ72_WE_72_M536_KK;a=shortlog;h=refs/heads/Driver_M408
+则下载的代码是 git clone ssh://git@192.168.0.119/gitweb/ALPS.KK1.MP6.V1_ZTENJ72_WE_72_M536_KK Driver_M408(末尾指定新的名字)
+然后checkout 去分支就好了
+
+
+【修改了代码烧进手机测试】
+
+  一次编译要./mk 工程名 new 
+改了.c 内容→  ./mk r k bootimage   (测评还要加上lk。每次修改都要重新用服务器编译一遍) 将修改过得东西传一遍→ 烧进手机
+   ./mk n k && ./mk bootimage   
+【如何上传】
+在alps$下git diff mediatek/custom/common/kernel/imgsensor/ 看历史修改→git branch→
+看分支→git add mediatek/..XXXX.c 将修改的东西上传→git commit -m "备注" →  
+git push origin ___:___ 填分支，上传。（或者不用:___直接上也行）
+
+【删除以及恢复】
+删除：rm -r file
+恢复：git status 查看状况 → git reset HEAD file → git checkout -- file 
+
+【忽略】
+ cat .gitignore  *.[oa] *~
+第一行告诉 Git 忽略所有以 .o 或 .a 结尾的文件。第二行告诉 Git 
+忽略所有以波浪符（~）结尾的文件
+
+【flashtool配置地址】
+Z:\Driver_M408\alps\out\target\product\ztenj72_we_72_m536_kk
+
+【开发成功合并提交】
+开启一个试验分支(experimental)，如果分支开发成功则合并到主分支（master），
+否则放弃该试验分支。
+#git branch experimental //创建一个试验分支，名称叫experimental
+#git branch //显示当前都有哪些分支，其中标注*为当前所在分支
+#git checkout experimental //转移到experimental分支
+（省略数小时在此分支上的开发过程）…
+
+#git add 
+git commit -m "[] ~"
+git push origin Driver_M402_JHZT_M4010:Driver_M402_JHZT_M4010
+
+回去网页分支检查
+如果分支开发成功：
+#git commit -a //在experimental分支改进完代码之后用commit在此分支中进行提交
+#git checkout master //转移回master分支
+#git merge experimental //经证实分支开发成功，将exerimental分支合并到主分支
+#git commit -a //彻底完成此次分支合并，即提交master分支
+#git branch -d experimental //因为experimental分支已提交，所以可安全删除此分支
+
+如果分支开发失败：
+#git checkout master
+#git branch -D experimental //由于分支被证明失败，因此使用-D来放弃并删除该分支
+
+【打印内核】
+adb shell cat proc/kmsg | tee klk.log，别进入adb shell，Ctrl + C 退出/停止
+文件就在C:\Users\aeon klk.log
+
+【查找2155】
+cat /proc/kmsg | grep 2155
+
+【进入自测】
+*983*0#   *#83*0#
+
+【复制类似的LCM的文档】
+要记得删除在project里面复制源在LCM的名字
+
+【编译错误找】
+ztenj72_we_72_m536_kk_kernel.log
+
+【./mk r k lk bootimage dr】
+编译了安卓
+
+【别人分支修改了东西自己想抓取】
+git cherry-pick 代号
+git push origin
+
+【第二种方法】
+git reset --hard <commit id>先去到某个push点
+git fetch再同步服务器
+git pull --rebase origin 分支名
+git log 看看有没有更新
+./mk r k lk booimage再编译
+
+【查看当前手机的摄像头型号】
+$ adb shell cat /proc/kmsg | tee log6.log　
+
+【回退版本】
+git reset --hard commit 

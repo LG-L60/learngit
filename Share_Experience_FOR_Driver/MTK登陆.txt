@@ -1,0 +1,40 @@
+online.mediatek.com
+zhang.weitao@eastaeon.com
+zhangweitao123
+8853475411
+
+
+  git clone ssh://git@192.168.0.119/home/git/ALPS.KK1.MP6.V1_ZTENJ72_WE_72_M536_KK -b Driver_Base
+        git clone ssh://git@192.168.0.242/github/ALPS.L0.P45.2_K35V1_64_OP01_PRE_INHOUSE -b Driver_Base_E520
+
+
+驱动放置位置
+
+G:\MyProject\ALPS.KK1.MP1.V2.10_EASTAEON82_WET_KK\alps\mediatek\custom\common\kernel\
+
+hal效果层：
+G:\MyProject\ALPS.KK1.MP1.V2.10_EASTAEON82_WET_KK\alps\mediatek\custom\common\hal\
+
+
+
+2、MTK文档密码
+        8853475411
+        3220777092
+
+        4205161841
+		
+		
+		
+		http://eportal.mediatek.com/irj/portal
+eService系统：usr:ZHANG_WEITAO_AEON   ZHANGWEITAO123
+ 
+ONLINE:
+http://online.mediatek.com
+用户名：zhang.weitao@eastaeon.com
+密  码：zhangweitao123
+DCC文档密码：8853475411
+ 
+fex：
+https://fex.mediatek.com
+Fex系统：usr:eastaeon-6(首选)   pwd:eastaeon
+          usr:zte-83(次选)       pwd:zhangweitao123

@@ -1,0 +1,137 @@
+v3.2.2 2013/10/16 Maintainance Man: Lex Hsieh
+Fix missing definitinos
+*********************************************************
+v3.2.1 2013/10/14 Maintainance Man: Lex Hsieh
+Remove unnecessary codes
+*********************************************************
+v3.2.0 2013/10/7 Maintainance Man: Lex Hsieh
+Add STK_GES, disabled by default
+Revise stk3x1x_read_id()
+*********************************************************
+v3.1.3 2013/6/27 Maintainance Man: Lex Hsieh
+Change the name STK_FIR to STK_ALS_FIR
+Fixed "s16 raw" error for STK_ALS_FIR
+Variable ALS fir length
+Add new PID
+Show HT/LT at stk3x1x_enable_ps()
+Add STK_CHK_REG
+Reduce ps_debounce to 10 ms
+Set init value for ps_high_thd_val and ps_low_thd_val
+Apply STK_ALS_CODE_CHANGE_THD for ALS polling
+Add 0x87=0x60 in stk3x1x_init_client(), disabled by default
+*********************************************************
+v3.1.2 2013/4/23 Maintainance Man: Lex Hsieh
+Refine STK_TUNE0
+Remove obj->int_val |= 0x10 at stk3x1x_i2c_probe()
+Fix incorrect psctrl_val in stk3x1x_init_client()
+Fix invalid allreg
+*********************************************************
+v3.1.1 2013/4/12 Maintainance Man: Lex Hsieh
+Add STK_IRS switch, Disable IRS mode by default
+Remove STK_TUNE1
+Support MT6572
+*********************************************************
+v3.1.0 2013/4/3 Maintainance Man: Lex Hsieh
+Use stk3x1x_master_recv() for i2c read operation
+Remove STK_FLG_PSDR_MASK check for polling
+Add a 4-ms delay in ps enable before get flag reg
+Re-enable PS in stk3x1x_get_ir_value()
+If PS is enabled, stk3x1x_get_ir_value() will not be executed in stk3x1x_enable_als()
+Check pid != 0 in stk3x1x_read_id()
+Enable STK_TUNE0 by default, change the default STK_MAX_MIN_DIFF=200,STK_LT_N_CT=100, and STK_HT_N_CT=150
+*********************************************************
+v3.0.19 2013/3/12 Maintainance Man: Lex Hsieh
+Include StkRawViewer_V5
+Default als_correct_factor = 1000;
+Fixed some compile error
+Fixed incorrect reading error in stk3x1x_show_ir()
+For mt657x, i2c bus number number=0. For mt6589, default=3
+Force PRS_PS=0b00 for PS polling mode
+*********************************************************
+v3.0.18 2013/2/22 Maintainance Man: Lex Hsieh
+Revise allreg format and added status sysfs
+Revise STK_TUNE0
+Double the limitation in stk3x1x_ps_tune_zero_val()
+IRS compensation
+Check FLG_PSDR and FLG_ALSDR at every polling
+Check PID in stk3x1x_init_all_setting()
+*********************************************************
+v3.0.17 2013/1/24 Maintainance Man: Lex Hsieh
+Revise default parameters
+*********************************************************
+v3.0.16 2013/1/16 Maintainance Man: Lex Hsieh
+Reset parameters of STK_TUNE0 at every ps_enable
+Force report FLG_NF at stk3x1x_enable_ps() for interrupt mode
+*********************************************************
+v3.0.14 2013/1/9 Maintainance Man: Lex Hsieh
+Added FIR filter, default is disabled
+Fixed the problem that ps report near immediately after enable
+Fixed a serious that interrupt will not occur again once ps is enabled
+*********************************************************
+v3.0.12 2013/1/3 Maintainance Man: Lex Hsieh
+Fix the recursion problem in stk3x1x_ps_tune_zero_nex()
+Report to upper layer in stk3x1x_ps_tune_zero_nex() only in interrupt mode
+Fix the bug that oui occurs after entering early_suspend
+Fix the missing include file:mt_pm_ldo in cust_alsps.c
+Default .i2c_num    = 3 for mt6589, while default .i2c_num    = 0 for mt657x
+*********************************************************
+v3.0.11 2012/12/27 Maintainance Man: Lex Hsieh
+Initial support for mt6589
+Change default persistance = 4
+Fixed the als_thd_l < 0 in stk3x1x_set_als_int_thd()
+LT and HT can be shown in stk3x1x_show_config() for STK_TUNE0
+*********************************************************
+v3.0.10 2012/12/27 Maintainance Man: Lex Hsieh
+Fixed bugs in STK_TUNE0
+No longer run schedule_delayed_work() if ALS and PS are both polling mode
+Fixed stk3x1x_show_allreg()
+*********************************************************
+v3.0.9 2012/12/27 Maintainance Man: Lex Hsieh
+Revise STK_TUNE1, add K_TYPE_NF
+*********************************************************
+v3.0.8 2012/12/26 Maintainance Man: Lex Hsieh
+Fixed the bug that ALS is disabled after PS is enabled
+schedule_delayed_work() in stk3x1x_enable_als() for interrupt mode only
+****************************************************************
+v3.0.7 2012/12/21 Maintainance Man: Lex Hsieh
+Fixed STK_TUNE0 error in stk3x1x_ps_tune_zero_nex()
+****************************************************************
+v3.0.6 2012/12/20 Maintainance Man: Lex Hsieh
+Fixed the ps_debounce on bug 
+Fine tune als_debounce and ps_debounce time, and ALS/PS debounce is 
+on only when polling
+Revise STK_TUNE0
+****************************************************************
+v3.0.5 2012/12/20 Maintainance Man: Lex Hsieh
+Revise STK_TUNE1
+****************************************************************
+v3.0.4 2012/12/18 Maintainance Man: Lex Hsieh
+Added STK_TUNE0
+Force write 1 to bits that don't need to be cleared in stk3x1x_clear_intr()
+****************************************************************
+v3.0.3 2012/12/12 Maintainance Man: Lex Hsieh
+Added STK_TUNE1
+Fixed 100 ms wait in cust_alsps_hw.c
+show() should always use scnprintf()
+****************************************************************
+v3.0.2 2012/12/4 Maintainance Man: Lex Hsieh
+Fixed the bug that PS always reports 0
+stk3x1x_store_config() can set thd to register
+Fixed stk3x1x_show_allreg()
+Fixed the near/far judgement in stk3x1x_get_ps_value(), use NF_Flg instead
+****************************************************************
+v3.0.1 2012/11/30 Maintainance Man: Lex Hsieh
+Default wait = 100ms
+Add allreg sysfs
+Remove all PS tuning function
+stk3x1x_write_ps_low_thd: thd is u16
+Add stk3x1x_write_als_high_thd() and stk3x1x_write_als_low_thd()
+Revise the timing to enable wait state
+Set ALS thd at enable to force trigger int
+Revise stk3x1x_eint_work() and init procedure
+Modify stk3x1x_get_ps_value for PS int mode4
+Turn off ALS at stk3x1x_early_suspend() only when ALS is enabled, and turn on at stk3x1x_late_resume()
+Tune the value of als_debounce and ps_debounce
+****************************************************************
+v3.0.0 2012/11/7 Maintainance Man: Lex Hsieh
+Initial release
