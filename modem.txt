@@ -1,0 +1,219 @@
+modem脚本拷贝
+
+
+./../alps/device/mediatek/build/build/tools/modemRenameCopy.pl ../AEON6580_WE_L_GPRS_HSPA_MOLY.WR8.W1449.MD.WG.MP.V6/ AEON6580_WE_L_HSPA
+
+
+
+
+mktorrent -p -v -l 23 -a <announce url> -o output.torrent <input directory or file>
+
+
+-l 参数可以调大一点
+
+If you want to specify piece size for torrent, you can use -l switch (small L) it's in potency of 2 so:
+2^19 = 524 288 = 512 KiB for filesizes between 512 MiB - 1024 MiB
+2^20 = 1 048 576 = 1024 KiB for filesizes between 1 GiB - 2 GiB
+2^21 = 2 097 152 = 2048 KiB for filesizes between 2 GiB - 4 GiB
+2^22 = 4 194 304 = 4096 KiB for filesizes between 4 GiB - 8 GiB
+2^23 = 8 388 608 = 8192 KiB for filesizes between 8 GiB - 16 GiB
+2^24 = 16 777 216 = 16384 KiB for filesizes between 16 GiB - 512 GiB This is the max you should ever have to use.
+2^25 = 33 554 432 = 32768 KiB (note that utorrent versions before 3.x CANNOT load torrents with this or higher piece-size)
+
+ln -s ../The.X-Files.S01-09.720p.BluRay.x264-GECKOS/The.X-Files.S08.720p.BluRay.x264-GECKOS/* The.X-Files.S01-09.720p.BluRay.x264-GECKOS/
+
+
+
+  ==================================================================
+                =                   Deluge安装结束，下面是Deluge的相关信息
+                ==================================================================
+                = 你的Deluge 登录地址        : http://212.83.165.116:8112 
+                = 你的Deluge 登录密码        : deluge
+                = 你的Deluge 下载路径        : /home/box123/downloads
+                = Deluge pass                : 0e19a0b1b94ff9b5a10527fa2b94f989d765e0f1
+                = Deluge Username            : localclient
+                ==================================================================
+                = 感谢使用 SEEDBOX-军团 一键安装脚本
+                = SEEDBOX-军团 网址 www.dwhd.org
+                ==================================================================
+				
+				
+				
+				
+                       Rtorrent + Rutorrent Auto Install
+                       Patrick Kerwood @ LinuxBloggen.dk
+--------------------------------------------------------------------------------
+
+Installation is complete.
+
+Your downloads folder is in /home/hapshon/Downloads
+Sessions data is /home/hapshon/.rtorrent-session
+rtorrent's configuration file is /home/hapshon/.rtorrent.rc
+
+If you want to change settings for rtorrent, such as download folder, etc.,
+you need to edit the '.rtorrent.rc' file. E.g. 'nano /home/hapshon/.rtorrent.rc'
+
+LOCAL IP: http://176.31.118.147/rutorrent
+EXTERNAL IP: http://2001:41d0:8:3d93::1/rutorrent
+
+Visit rutorrent through the above address.
+
+
+root@ns394834:/home/hapshon/rtorrent.auto.install# 		
+
+
+
+
+
+This page shows the details for your slot and the software after they have been installed. If you are looking to retrieve or put data to and from your slot, please use either the FTP or SFTP details provided below.
+
+FTP / SFTP / SSH Access
+
+Serverlelantos.feralhosting.comUsernamehapshonPassword
+q032N0vDmNZFLFv5
+More information can be found in the Frequently Asked Questions.
+Installed Software
+
+Deluge
+
+URLhttp://lelantos.feralhosting.com/hapshon/deluge/Secure URLhttps://lelantos.feralhosting.com/hapshon/deluge/Password
+EDSYFaVOorQpwaso
+More InformationDeluge - troubleshooting
+
+
+
+/D-Z0N3|[de42]|decibeL|FoRM|FTW-HD|G3N3|HiFi|INtL|Penumbra|Positive|SaNcTi|xander/
+
+
+
+
+
+我在SUSE Linux Enterprise Server 10 (x86_64)上编译安装MPlayer源码，并且安装成功。
+
+接下来我用如下命令对ts文件截图：
+
+./mplayer -ss 00:20:26 -demuxer lavf -vf screenshot -vo png -lavdopts skiploopfilter=all:skipframe=nonkey -nosound -frames 16 /home/heikediguo2.ts
+
+  mplayer -vf screenshot -vo png:z=9 -nosound -frames 3 So.Young.2013.BluRay.1080p.AC3.2Audio.x264-CHD.mkv
+
+mplayer -vf screenshot -vo png:z=9 -nosound -frames 3 So.Young.2013.BluRay.1080p.AC3.2Audio.x264-CHD -ss 23333
+
+mplayer "Filename.avi" -nosound -vo png:z=0 -ss 360 -frames 1
+mplayer "Filename.avi" -nosound -vo png:z=0 -ss 600 -frames 1
+mplayer The.Martian.2015.3D.1080p.BluRay.DTS.MVC-HiFi.mkv -nosound -vo png:z=0 -ss 900 -frames 1
+
+ffmpeg -ss 00:05:00 -i 00000.m2ts -vframes 1 -y -f image2 "screenshot1.png"
+ffmpeg -ss 00:10:00 -i "Filename.avi" -vframes 1 -y -f image2 "screenshot2.png"
+ffmpeg -ss 00:15:00 -i "Filename.avi" -vframes 1 -y -f image2 "screenshot3.png"
+
+
+[img]http://img.world-in-hd.net/images/h3kpO.png[/img]
+
+[img]http://img.world-in-hd.net/images/9J0yb.png[/img]
+
+[img]http://img.world-in-hd.net/images/d69Zg.png[/img]
+
+[img]http://img.world-in-hd.net/images/GaNE.png[/img]
+
+
+
+
+mplayer So.Young.2013.BluRay.1080p.AC3.2Audio.x264-CHD.mkv -nosound -vo png:z=0 -ss 360 -frames 1
+命令解释如下：
+
+-ss 00:05:26：在ts文件中的00:05:26这个时刻截图；
+
+-demuxer lavf -vf screenshot：就在00:05:26这个时刻点截图，不要跑到其他时间点截图，比如跑到00:04:26；
+
+-vo jpeg ：截图为jpg格式的；
+
+-lavdopts skiploopfilter=all:skipframe=nonkey： 去除截图有马赛克现象；
+
+-nosound ：解码时忽略音频；
+
+-frames 16 ：一共截取16帧；
+
+/home/heikediguo2.ts：截图的视频，是一个ts文件。
+
+
+
+现在出现一个问题：
+
+1. 我在00:05:26这个时刻点截图16帧，但是都是完全一片灰白；但是截图20帧，从第18帧开始，是有清晰的图像的；
+
+2. 我在00:01:34这个时刻点截图4帧，还是完全一片灰白；但是截图10帧，从第6帧开始，有清晰的图像的；
+
+以此类推，在不同的时刻点，我需要截X帧(X>=1)，其中，至少第X帧是有清晰的图像的；我怎么去确定这个X是多大呢？
+
+我也想过其中一个方法：就是在上述截图命令中加上一个scale参数，可以指定截图的高和宽。这样截出来的图，如果是灰白的话，大小恒为512字节；如果是有清晰图像的话，大小就肯定不是512字节，所以可以根据截图的大小来判断是否截出了清晰的图像，但是总觉这个方法不好。
+
+
+
+
+==================================================================
+                =                   FTP安装结束
+                ==================================================================
+                = FTP IP地址       : 176.31.118.147
+                = FTP 端口         : 21
+                = FTP 用户名       : hapshon
+                = FTP 密码         : N2Q5ZjY4
+                = ftp://hapshon:N2Q5ZjY4@176.31.118.147/downloads
+					ftp://hapshon:q032N0vDmNZFLFv5@lelantos.feralhosting.com
+                ==================================================================
+                = 感谢使用 SEEDBOX-军团 一键安装脚本
+                = SEEDBOX-军团 网址 www.dwhd.org
+                ==================================================================
+				
+				
+				
+				
+				
+#!/bin/bash
+adduser sdfsd
+mkdir /home/sdfsd/deluge_watch
+apt-get -y install libarchive-zip-perl libnet-ssleay-perl libhtml-parser-perl libxml-libxml-perl libjson-perl libjson-xs-perl libxml-libxslt-perl build-essential zip unzip screen
+apt-get install -y irssi
+mkdir -p ~/.irssi/scripts/autorun ~/.autodl
+echo -e "[options]\ngui-server-port = 12345\ngui-server-password = 147258369" > ~/.autodl/autodl.cfg
+wget -qO ~/autodl-irssi.zip http://update.autodl-community.com/autodl-irssi-community.zip 
+
+unzip -qo ~/autodl-irssi.zip -d ~/.irssi/scripts/
+cp -f ~/.irssi/scripts/autodl-irssi.pl ~/.irssi/scripts/autorun/
+
+
+wget -qO ~/install.autodl.sh http://git.io/oTUCMg && bash ~/install.autodl.sh
+wget -qO ~/autodlrutorrentfix.sh http://git.io/BBUryw && bash ~/autodlrutorrentfix.sh
+
+wget -qO ~/install.autodl.sh http://git.io/oTUCMg && bash ~/install.autodl.sh
+wget -qO ~/autodlrutorrentfix.sh http://git.io/BBUryw && bash ~/autodlrutorrentfix.sh
+
+
+
+
+
+说明：
+访问地址：http://IP:9091
+用户名：admin
+密 码：自己设定
+配置文件：/etc/transmission-daemon/settings.json
+flexget配置文件：/root/.flexget/config.yml
+文件存储路径： /home/bt
+flexget RSS下载路径：/root/bt
+种子监控路径:/root/bt
+BT资源存储时间:2天，超过自动删除。
+修改transmission配置文件前关闭服务
+
+/etc/init.d/transmission-daemon stop
+1
+/etc/init.d/transmission-daemon stop
+修改完成后再开启
+
+/etc/init.d/transmission-daemon start
+1
+/etc/init.d/transmission-daemon start
+
+
+
+
+/etc/shadowsocks.json 
+
