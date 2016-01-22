@@ -21,29 +21,10 @@ If you want to specify piece size for torrent, you can use -l switch (small L) i
 2^24 = 16 777 216 = 16384 KiB for filesizes between 16 GiB - 512 GiB This is the max you should ever have to use.
 2^25 = 33 554 432 = 32768 KiB (note that utorrent versions before 3.x CANNOT load torrents with this or higher piece-size)
 
-                       Rtorrent + Rutorrent Auto Install
-                       Patrick Kerwood @ LinuxBloggen.dk
+ln -s ../The.X-Files.S01-09.720p.BluRay.x264-GECKOS/The.X-Files.S08.720p.BluRay.x264-GECKOS/* The.X-Files.S01-09.720p.BluRay.x264-GECKOS/
+
+
 --------------------------------------------------------------------------------
-
-
-
-
-
-
-This page shows the details for your slot and the software after they have been installed. If you are looking to retrieve or put data to and from your slot, please use either the FTP or SFTP details provided below.
-
-FTP / SFTP / SSH Access
-
-Serverlelantos.feralhosting.comUsernamehapshonPassword
-q032N0vDmNZFLFv5
-More information can be found in the Frequently Asked Questions.
-Installed Software
-
-Deluge
-
-URLhttp://lelantos.feralhosting.com/hapshon/deluge/Secure URLhttps://lelantos.feralhosting.com/hapshon/deluge/Password
-EDSYFaVOorQpwaso
-More InformationDeluge - troubleshooting
 
 
 
@@ -107,6 +88,9 @@ mplayer So.Young.2013.BluRay.1080p.AC3.2Audio.x264-CHD.mkv -nosound -vo png:z=0 
 
 
 
+==================================================================
+  
+						
 				
 				
 #!/bin/bash
@@ -132,6 +116,18 @@ wget -qO ~/autodlrutorrentfix.sh http://git.io/BBUryw && bash ~/autodlrutorrentf
 
 
 
+说明：
+访问地址：http://IP:9091
+用户名：admin
+密 码：自己设定
+配置文件：/etc/transmission-daemon/settings.json
+flexget配置文件：/root/.flexget/config.yml
+文件存储路径： /home/bt
+flexget RSS下载路径：/root/bt
+种子监控路径:/root/bt
+BT资源存储时间:2天，超过自动删除。
+修改transmission配置文件前关闭服务
+
 /etc/init.d/transmission-daemon stop
 1
 /etc/init.d/transmission-daemon stop
@@ -145,5 +141,7 @@ wget -qO ~/autodlrutorrentfix.sh http://git.io/BBUryw && bash ~/autodlrutorrentf
 
 
 /etc/shadowsocks.json 
+
+
 
 
