@@ -144,4 +144,23 @@ BT资源存储时间:2天，超过自动删除。
 
 
 
+Flexget安装方法：
+apt-get install python2.7
+
+apt-get install python-pip
+
+pip install --upgrade setuptools
+
+apt-get install libffi-dev libssl-dev python-dev -y
+
+
+pip install pathlib -U
+
+
+pip install flexget
+
+
+
+查看Flexget版本：
+flexget -V
 
